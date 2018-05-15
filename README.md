@@ -29,15 +29,15 @@ A sample middleware named 'logger' is present in the middleware file which is a 
 
 Following are the logs which are stored for every route : <br />
 
-'remote-addr', 
-'remote-user' ,
-'user-agent' ,
-'date',
-'method',
-'url',
-'http-version ',
-'status', 
-'content-length', 
+'remote-addr', <br />
+'remote-user' ,<br />
+'user-agent' ,<br />
+'date',<br />
+'method',<br />
+'url',<br />
+'http-version ',<br />
+'status', <br />
+'content-length',<br /> 
 'response-time'
 
 
