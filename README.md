@@ -1,4 +1,4 @@
-Starter project for creating a sample express server build using ES6 (babel), and using 
+Boilerplate project for creating a sample express server build using ES6 (babel), and using 
 
 + express
 + mongoose
@@ -19,3 +19,25 @@ npm start
 ```
 
 The server will run on port 3000.
+
+## Readme
+
+The code can be cloned and be modified as per the needs.
+A sample controller, service , route and model is present for the reference.
+A sample middleware named `logger' is present in the middleware file which is a router level middleware and can be included on any router as required.
+`Morgan` library is used to create all API logs and all logs are stored in logs file present in logger folder.
+
+Following are the logs which are stored for every route : 
+
+'remote-addr', 
+'remote-user' ,
+'user-agent' ,
+'date',
+'method',
+'url',
+'http-version ',
+'status', 
+'content-length', 
+'response-time'
+
+
