@@ -22,12 +22,19 @@ The server will run on port 3000.
 
 ## Readme
 
+```
 The code serves as a boilerplate and can be cloned and extended further as per the needs.<br />
 A sample controller, service , route and model is present for the reference.<br />
 A sample middleware named 'logger' is present in the middleware file which is a router level middleware and can be included on any route as required.<br />
 'Morgan' library is used to create all API logs and all logs are stored in logs file present in logger folder.<br />
 
-Following are the logs which are stored for every route : <br />
+```
+
+## API logs parameters
+
+Following is the info. which is stored for every API hit : <br />
+
+```
 
 'remote-addr', <br />
 'remote-user' ,<br />
@@ -39,5 +46,7 @@ Following are the logs which are stored for every route : <br />
 'status', <br />
 'content-length',<br /> 
 'response-time'
+
+```
 
 
