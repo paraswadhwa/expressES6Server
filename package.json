@@ -1,5 +1,5 @@
 {
-  "name": "policy-renewals-server",
+  "name": "expressES6SampleServer",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
