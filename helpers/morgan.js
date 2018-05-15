@@ -4,7 +4,7 @@ import path from 'path';
 
 export default () => {
     // create a write stream (in append mode)
-    var accessLogStream = fs.createWriteStream(path.join(__dirname, '../logger/policyRenewals.log'), { flags: 'a' })
+    var accessLogStream = fs.createWriteStream(path.join(__dirname, '../logger/logsFile.log'), { flags: 'a' })
     return morgan(function(tokens, req, res) {
         return [
             'remote-addr : ', tokens['remote-addr'](req, res), ' , ',
