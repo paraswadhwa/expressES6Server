@@ -7,6 +7,16 @@ import { validate } from 'indicative';
 
 const controller = {};
 
+controller.generateToken = async(req, res) => {
+    try {
+        let token = await testService.generateToken(req.body.id);
+        return success(res, { auth: true, token: token });
+
+    } catch (err) {
+        return failure(res, err);
+    }
+}
+
 controller.getAllCars = async(req, res) => {
     try {
         const cars = await testService.getAllCars();

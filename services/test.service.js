@@ -1,4 +1,5 @@
 import Car from '../models/test.model';
+import { generateToken } from '../helpers/jwt';
 
 let service = {};
 
@@ -12,6 +13,10 @@ service.addCar = (data) => {
 
 service.removeCar = (id) => {
     return Car.findOneAndRemove({ carId: id });
+}
+
+service.generateToken = (id) => {
+    return generateToken(id);
 }
 
 export default service;

@@ -8,6 +8,10 @@ const config = {
             options: {
                 debug: false
             }
+        },
+        jwtConfig: {
+            secret: 'thisismysecret',
+            expireTime: 1200 // expires in 20 min i.e. 1200 sec
         }
     }
 }
