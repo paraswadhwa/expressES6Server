@@ -10,4 +10,8 @@ service.addCar = (data) => {
     return new Car(data).save();
 }
 
+service.removeCar = (id) => {
+    return Car.findOneAndRemove({ carId: id });
+}
+
 export default service;

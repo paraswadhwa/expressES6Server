@@ -1,5 +1,5 @@
 import testService from '../services/test.service';
-import { success, failure } from '../helpers/sendResponse';
+import { success, failure, notFound } from '../helpers/sendResponse';
 import rules from '../dataValidators/test.validator';
 import { validate } from 'indicative';
 
@@ -25,5 +25,19 @@ controller.addCar = async(req, res) => {
         return failure(res, err);
     }
 }
+
+controller.removeCar = async(req, res) => {
+    try {
+        const removedData = await testService.removeCar(req.params.id);
+        if (!removedData) {
+            return notFound(res, 'No record present to remove');
+        } else {
+            return success(res, 'Record deleted successfully');
+        }
+    } catch (err) {
+        return failure(res, err);
+    }
+}
+
 
 export default controller;
