@@ -3,12 +3,13 @@ import carController from "../controllers/test.controller";
 import { logger } from '../middleware/middleware';
 
 const router = new Router();
-router.get('/allcars', carController.getAll);
 
-router.post('/addcar', (req, res) => {
-    carController.addCar(req, res);
-});
+router.post('/addcar', carController.addCar);
 
-router.get('/fetchAllcars', logger, carController.getAll);
+router.get('/fetchAllcars', carController.getAllCars);
+
+//router.get('/fetchCarsByYrOfManuf', carController.getAll);
+
+// router.get('/fetchAllcars', logger, carController.getAll);
 
 export default router;

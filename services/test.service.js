@@ -2,15 +2,12 @@ import Car from '../models/test.model';
 
 let service = {};
 
-service.getAll = () => {
+service.getAllCars = () => {
     return Car.find({});
 }
 
-service.addCar = (carName) => {
-    let carToAdd = Car({
-        name: carName
-    });
-    return carToAdd.save();
+service.addCar = (data) => {
+    return new Car(data).save();
 }
 
 export default service;
